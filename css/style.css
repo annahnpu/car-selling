@@ -29,6 +29,10 @@ html {
     scroll-behavior: smooth;
 }
 
+section {
+    padding: 2rem 9%;
+}
+
 .btn {
     display: inline-block;
     margin-top: 1rem;
@@ -39,6 +43,7 @@ html {
     font-size: 1.7rem;
     cursor: pointer;
     padding: .8rem .3rem;
+    text-align: center;
 }
 
 .btn:hover {
@@ -47,6 +52,7 @@ html {
 
 
 .header {
+    display: inline-block;
     position: fixed;
     top: 0;
     left: 0;
@@ -70,10 +76,10 @@ html {
 }
 
 .header .navbar a {
-    font-size: 1.7rem;
     margin: 0 1rem;
+    font-size: 1.7rem;
     color: var(--black);
-}
+    }
 
 .header .navbar a:hover {
     color: var(--yellow);
@@ -104,15 +110,20 @@ html {
 
 .login-form-container {
     position: fixed;
-    top: 0;
-    left: 0;
+    top:-105%; left:0;
     z-index: 1000;
-    height: 100%;
-    width: 100%;
-    background: rgba(255, 255, 255, .9);
+    height:100%;
+    width:100%;
+    background:rgba(255,255,255,.9);
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+}
+
+.login-form-container.active {
+    top: 0;
+    opacity: 1;
 }
 
 .login-form-container form {
@@ -141,7 +152,7 @@ html {
 .login-form-container form h3 {
     color: var(--black);
     font-size: 2.5rem;
-    padding-bottom: .5rem;
+    padding-bottom: 1rem;
     text-transform: uppercase;
 }
 
@@ -175,6 +186,23 @@ html {
     cursor: pointer;
 }
 
+.home {
+    padding-top: 10rem;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.home h1{
+    font-size: 7.5vw;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.home img {
+    width: 100%;
+    margin: 1rem 0;
+}
+
 /* media queries */
 @media(max-width: 991px) {
     html {
@@ -187,6 +215,10 @@ html {
 }
 
 .header.header.active {
+    padding: 2rem;
+}
+
+section {
     padding: 2rem;
 }
 
