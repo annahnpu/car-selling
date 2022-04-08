@@ -49,3 +49,13 @@ document.querySelector('.home').onmousemove = (e) => {
   });
 
 }
+
+document.querySelector('.home').onmousemoveleave = () => {
+
+  document.querySelectorAll('.home-parallax').forEach(elm => {
+    
+    elm.style.transform = `translateX(0px) translateY(0px)`;
+
+  });
+
+}
