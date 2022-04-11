@@ -76,12 +76,12 @@ section {
 
 
 .header {
-    display: inline-block;
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 999;
+    z-index: 1000;
     background-color: #fff;
     display: flex;
     align-items: center;
@@ -118,7 +118,6 @@ section {
     color: var(--light-color);
     cursor: pointer;
     display: none;
-
 }
 
 #menu-btn {
@@ -349,6 +348,97 @@ section {
     background: var(--yellow);
 }
 
+.services .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.services .box-container .box {
+    text-align: center;
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+}
+
+.services .box-container .box i {
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    font-style: 2.5rem;
+    color: var(--black);
+    background: var(--yellow);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.services .box-container .box h3 {
+    color: var(--black);
+    font-style: 2.2rem;
+}
+
+.services .box-container .box p {
+    color: var(--light-color);
+    font-style: 1.4rem;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+.services .box-container .box:hover {
+    background: var(--black);
+}
+
+.services .box-container .box:hover h3{
+    color: #fff;
+}
+
+.services .box-container .box:hover p{
+    color: #eee;
+}
+
+.featured .featured-slider {
+    padding: 1rem;
+    padding-bottom: 4rem;
+}
+
+.featured .featured-slider .box {
+    text-align: center;
+    pad: 2rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    border-radius: .5rem;
+}
+
+.featured .featured-slider .box img {
+    width: 100%;
+    padding: 2rem;
+}
+
+.featured .featured-slider .box:hover img {
+    transform: scale(.9);    
+}
+
+.featured .featured-slider .box .content h3 {
+    font-size: 2.2rem;
+    color: var(--black);
+}
+
+.featured .featured-slider .box .content .stars {
+    padding: 1rem 0;
+}
+
+.featured .featured-slider .box .content .stars i {
+    font-size: 1.7rem;
+    color: var(--yellow);
+}
+
+.featured .featured-slider .box .content .price {
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+
 
 
 
@@ -421,5 +511,8 @@ section {
 @media(max-width:450px) {
     html {
         font-size: 50%;
+    }
+    .heading {
+        font-size: 3rem;
     }
 }
